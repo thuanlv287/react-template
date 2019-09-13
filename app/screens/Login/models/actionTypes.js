@@ -1,0 +1,7 @@
+const GET_LOGIN = 'GET_LOGIN';
+const GET_LOGIN_SUCCESS = 'GET_LOGIN_SUCCESS';
+
+export default {
+  GET_LOGIN,
+  GET_LOGIN_SUCCESS
+}

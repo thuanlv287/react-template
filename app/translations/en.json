@@ -1,0 +1,7 @@
+{
+  "default": "this is default text",
+  "boilerplate.containers.LocaleToggle.de": "de",
+  "boilerplate.containers.LocaleToggle.en": "en",
+  "boilerplate.containers.App.hello": "hello",
+  "boilerplate.containers.Layout.Header.header": "Header"
+}
