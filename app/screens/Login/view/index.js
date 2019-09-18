@@ -3,15 +3,39 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { makeSelectLogin, makeSelectMessage, makeSelectIsLoading } from '../models/selectors';
+import { Input, Button } from '../../../components';
+import './styles.scss';
 import actions from '../models/actions';
+
 class LoginView extends React.Component {
+  handleLogin = () => {
+    this.props.getLogin({
+      username: this.userName.value,
+      password: this.password.value
+    })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps !== this.props && nextProps.user && nextProps.user.success) {
+        this.props.history.push('/users')
+    }
+  }
   render() {
-    console.log('this.props: ', this.props);
     return (
-      <div>
+      <div className="login-form">
+        <Input
+          horizontal
+          label="Username"
+          ref={refName => this.userName = refName}
+        />
+        <Input
+          horizontal
+          label="Password"
+          type="password"
+          ref={refpassword => this.password = refpassword}
+        />
         {this.props.isLoading && <h1>Loading...</h1>}
-        <h1>Login view</h1>
-        <button onClick={() => this.props.getLogin({username: 'admin', password: 'admin'})}>Login</button>
+        <Button onClick={() => this.handleLogin()}>Login</Button>
       </div>
     )
   }

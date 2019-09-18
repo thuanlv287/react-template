@@ -1,0 +1,80 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.alert {
+    position: relative;
+    min-width: 220px;
+    &__content {
+        display: flex;
+        position: relative;
+        border: 1px solid $base_color;
+        padding: 10px 15px;
+        padding-left: 30px;
+        border-radius: 5px;
+        min-height: 50px;
+        min-width: 150px;
+        background-color: $white;
+        &::before {
+            position: absolute;
+            left: 10px;
+            content: "";
+            display: inline-block;
+            // background-image: url("../../assets/images/mes-info.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+    }
+    &__without-icon {
+        &::before {
+            display: none;
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+    &__message {
+        line-height: 1;
+        font-size: $font_size_lg;
+    }
+    &__description {
+        margin-top: 5px;
+        font-size: $font_size_sm;
+    }
+    &--info {
+        &::before {
+            background-image: url("../../assets/images/mes-info.png");
+        }
+        border: 1px solid $base_color;
+        background-color: $base_bg;
+    }
+    &--success {
+        &::before {
+            background-image: url("../../assets/images/mes-success.png");
+        }
+        border: 1px solid $green;
+        background-color: $green_bg;
+    }
+    &--error {
+        &::before {
+            background-image: url("../../assets/images/mes-error.png");
+        }
+        border: 1px solid $red;
+        background-color: $red_bg;
+    }
+    &--warning {
+        &::before {
+            background-image: url("../../assets/images/mes-warning.png");
+        }
+        border: 1px solid $orange;
+        background-color: $orange_bg;
+    }
+
+    &__closeable-icon {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+    }
+}

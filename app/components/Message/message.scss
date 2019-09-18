@@ -1,0 +1,53 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.message {
+    position: relative;
+    cursor: pointer;
+    min-width: 200px;
+    &__content {
+        display: flex;
+        align-items: center;
+        border: 1px solid $base_color;
+        box-shadow: $base_box_shaw_down;
+        padding: 10px 15px;
+        padding-left: 50px;
+        margin-top: 10px;
+        border-radius: 5px;
+        min-height: 50px;
+        min-width: 150px;
+        background-color: $white;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            content: "";
+            display: inline-block;
+            background-image: url("../../assets/images/mes-info.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &--info {
+        &::before {
+            background-image: url("../../assets/images/mes-info.png");
+        }
+    }
+    &--success {
+        &::before {
+            background-image: url("../../assets/images/mes-success.png");
+        }
+    }
+    &--error {
+        &::before {
+            background-image: url("../../assets/images/mes-error.png");
+        }
+    }
+    &--warning {
+        &::before {
+            background-image: url("../../assets/images/mes-warning.png");
+        }
+    }
+}

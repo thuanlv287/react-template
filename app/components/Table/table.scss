@@ -1,0 +1,60 @@
+@import '../../styles/ITcss/settings/variables.scss';
+.table {
+    
+    max-width: 100%;
+    border: 1px solid;
+    background-color: #fff;
+    &__col {
+        padding: 10px 0;
+        border-bottom: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        &--empty {
+            text-align: center;
+        }
+    }
+    &__row {
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+        &:hover {
+            background-color: #DDD;
+            cursor: pointer;
+        }
+        &__disabled {
+            pointer-events: none;
+            background-color: rgba($color: $begi, $alpha: 0.5);
+            color: $begi;
+        }
+    }
+    &__content {
+        position: relative;
+        &--empty {
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(240, 252, 255);
+            opacity: 1;
+        }
+    }
+    &__loading {
+        position: relative;
+        z-index: 999;
+    }
+    &__item {
+        flex: 1;
+        align-self: center;
+        padding: 0 10px;
+        &__disabled {
+            span, div {
+                color: $begi !important;
+            }
+        }
+    }
+  }

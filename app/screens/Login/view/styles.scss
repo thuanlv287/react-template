@@ -1,0 +1,11 @@
+.login-form {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  padding: 20px 40px;
+  & > div:first-child {
+    margin-bottom: 20px;
+  }
+}

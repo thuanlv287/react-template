@@ -1,0 +1,36 @@
+@import '../../styles/ITcss/settings/variables.scss';
+.drawer {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 200px;
+    background-color: $white;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    &--left {
+        box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    }
+    &--right {
+        box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+    }
+    &--top {
+        left: 0;
+        top: 0;
+        height: 200px;
+        width: 100vw;
+    }
+    &--bottom {
+        bottom: 0;
+        left: 0;
+        height: 200px;
+        width: 100vw;
+    }
+
+    &__header {
+        padding: 16px 24px;
+        border-bottom: 1px solid $begi;
+    }
+    &__body {
+        padding: 18px 24px;
+    }
+
+}

@@ -1,0 +1,41 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.dropdown {
+    &__icon {
+        cursor: pointer;
+    }
+    &__btn {
+        color: $base_color;
+    }
+    &__text {
+        cursor: pointer;
+    }
+  
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        position: absolute;
+        border: 1px solid $base_color;
+        box-shadow: $base_box_shaw_down;
+        margin-top: 15px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        min-height: 50px;
+        min-width: 150px;
+        background-color: $white;
+        &:before { // add arrow
+            content: "";
+            position: absolute;
+            top: -8px;
+            background-color: $white;
+            display: block;
+            border: solid $base_color;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 7px;
+            transform: rotate(-135deg);
+        }
+    }
+}

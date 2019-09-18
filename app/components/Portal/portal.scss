@@ -1,0 +1,47 @@
+.portal {
+    position: fixed;
+    z-index: 999;
+  
+    &--top {
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &--top-left {
+        top: 0px;
+        left: 0;
+    }
+    &--top-right {
+        top: 0px;
+        right: 0;
+    }
+    &--bottom {
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &--bottom-left {
+        bottom: 0px;
+        left: 0;
+    }
+    &--bottom-right {
+        bottom: 0px;
+        right: 0;
+    }
+
+    &--left {
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+    }
+    &--right {
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+    }
+    &--center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

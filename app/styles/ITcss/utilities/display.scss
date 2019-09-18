@@ -1,0 +1,54 @@
+.d-none {
+  display: none;
+}
+.d-inline-block {
+  display: inline-block;
+}
+//  utils css
+.d-flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.justify-content {
+  &--center {
+      justify-content: center;
+  }
+  &--between {
+      justify-content: space-between;
+  }
+  &--around {
+      justify-content: space-around;
+  }
+  &--end {
+    justify-content: flex-end;
+  }
+}
+.align-items {
+  &--center {
+      align-items: center;
+  }
+}
+
+// position
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+
+// text
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.pop-confirm {
+    cursor: pointer;
+    &__content {
+        position: absolute;
+        border: 1px solid $base_color;
+        box-shadow: $base_box_shaw_down;
+        margin-top: 15px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        min-height: 50px;
+        min-width: 150px;
+        background-color: $white;
+        &:before {
+            // add arrow
+            content: "";
+            position: absolute;
+            top: -8px;
+            background-color: $white;
+            display: block;
+            border: solid $base_color;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 7px;
+            transform: rotate(-135deg);
+        }
+        .btn {
+          font-size: $font_size_sm;
+          height: 24px;
+          padding: 0 10px;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+}

@@ -1,0 +1,18 @@
+// @include b('o-media') {
+//     display: table;
+//     width: 100%;
+//     @include e('img') {
+//         display: table-cell;
+//         vertical-align: top;
+//         padding-right: $base-spacing-unit;
+//         img {
+//             display: block;
+//             max-width: none;
+//         }
+//     }
+//     @include e('body') {
+//         display: table-cell;
+//         vertical-align: top;
+//         width: 100%;
+//     }
+// }

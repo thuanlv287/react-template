@@ -7,6 +7,7 @@ import LanguageProvider from './containers/LanguageProvider/view';
 import App from './containers/App/view';
 import { translationMessages } from './i18n.js';
 import history from './utils/history';
+import './styles/ITcss'
 
 const MOUNT_NODE = document.getElementById('app');
 

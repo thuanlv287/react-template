@@ -1,0 +1,70 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.checkbox {
+    &:hover {
+        .checkbox__box {
+            border: 1px solid $base_color;
+        }
+    }
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    &__box {
+        border: 1px solid $begi;
+        border-radius: $base_border_radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 17px;
+        width: 17px;
+        background-color: $white;
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    &--half-past {
+        .checkbox__box {
+            background-color: $white;
+            border: 1px solid $base_color;
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 1px;
+                width: 5px;
+                height: 10px;
+                border: solid $base_color;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+.checkbox input:checked ~ .checkbox__box {
+    background-color: $base_color;
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+.checkbox input:disabled ~ .checkbox__box {
+    border: 1px solid $begi;
+}

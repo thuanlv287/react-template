@@ -1,0 +1,7 @@
+@import '../tools/mixins.scss';
+@include repeat-unit-classes-map($repeatable-slugs, 0, 20, px, 5);
+.p {
+    &-10 {
+        padding: 10px;
+    }
+}

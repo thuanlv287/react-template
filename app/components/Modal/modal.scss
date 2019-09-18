@@ -1,0 +1,57 @@
+@import "../../styles/ITcss/settings/variables.scss";
+.modal {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 600px;
+    background-color: #fff;
+    margin-top: 25%;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid;
+    }
+    &__turnOff {
+        cursor: pointer;
+    }
+    &__title {
+        text-align: left;
+    }
+    &__content {
+        padding: 20px;
+    }
+    &__footer {
+        border-top: 1px solid;
+        padding: 20px;
+        button:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    &__overlay {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: $begi, $alpha: 0.7);
+        // opacity: 0.5;
+        &::after {
+            position: absolute;
+            top: calc(50% - 10px);
+            left: calc(50% - 10px);
+            content: "";
+            border: 4px solid $white;
+            border-radius: 50%;
+            border-top: 4px solid $base_color;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 1s linear infinite; /* Safari */
+            animation: spin 1s linear infinite;
+            pointer-events: none;
+        }
+    }
+}
