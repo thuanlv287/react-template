@@ -2,16 +2,42 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
+import { InputGroup, FormGroup, Classes, Button } from '@blueprintjs/core';
 import { makeSelectLogin, makeSelectMessage, makeSelectIsLoading } from '../models/selectors';
 import actions from '../models/actions';
 class LoginView extends React.Component {
+  handleLogin = () => {
+    const payload = {
+      name: this.name.value,
+      password: this.password.value
+    }
+    console.log('payload: ', payload);
+  }
   render() {
-    console.log('this.props: ', this.props);
     return (
       <div>
         {this.props.isLoading && <h1>Loading...</h1>}
         <h1>Login view</h1>
-        <button onClick={() => this.props.getLogin({username: 'admin', password: 'admin'})}>Login</button>
+        <FormGroup
+            label="Username"
+            labelFor="text-input"
+        >
+            <InputGroup
+              placeholder="Username"
+              inputRef={ref => this.name = ref}
+            />
+        </FormGroup>
+        <FormGroup
+            label="Password"
+            labelFor="text-input"
+            >
+            <InputGroup
+              placeholder="Password"
+              type="password"
+              inputRef={ref => this.password = ref}
+            />
+        </FormGroup>
+        <Button onClick={this.handleLogin}>Login</Button>
       </div>
     )
   }

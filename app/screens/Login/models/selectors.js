@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
 const selectLogin = state => state.login || initialState;
-const makeSelectLogin = () =>
+const makeSelectUser = () =>
   createSelector(
     selectLogin,
     loginState => loginState.user
@@ -19,10 +19,20 @@ const makeSelectIsLoading = () =>
     selectLogin,
     loginState => loginState.isLoading
   )
-
+const makeSelectLogin = createSelector(
+    makeSelectUser(),
+    makeSelectMessage(),
+    makeSelectIsLoading(),
+    (user, message, isLoading) => ({
+      user,
+      message,
+      isLoading
+    })
+  )
 export {
   selectLogin,
-  makeSelectLogin,
+  makeSelectUser,
   makeSelectMessage,
-  makeSelectIsLoading
+  makeSelectIsLoading,
+  makeSelectLogin
 }

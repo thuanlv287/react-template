@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import "@blueprintjs/core/lib/css/blueprint.css";
 import routes from '../../../routes';
 import LayoutView from '../../Layout';
-import Login from '../../../screens/Login/view';
+import Login from '../../../screens/Login/view/Hook';
 
 /**
  * 
